@@ -8,5 +8,9 @@ namespace CakeShop.Controllers
 {
     public class CakeShopController:Controller
     {
+        public String Detail()
+        {
+            return "Hello from Cake Shop Controller";
+        }
     }
 }
