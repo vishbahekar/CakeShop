@@ -8,9 +8,18 @@ namespace CakeShop.Controllers
 {
     public class CakeShopController:Controller
     {
-        public String Detail()
+        public ActionResult Detail()
         {
-            return "Hello from Cake Shop Controller";
+            if(DateTime.Today.DayOfWeek==DayOfWeek.Monday)
+            {
+                return Redirect("/");
+            }
+            return new ContentResult()
+            {
+                Content="Hello from CakeShop"
+            };
+
+            
         }
     }
 }
